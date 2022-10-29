@@ -49,6 +49,8 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(8888, () => {
-  console.log("Backend server is running!");
+ const port = process.env.PORT || 8888;
+
+app.listen(port, () => {
+  console.log(`Backend server is running on port ${port}!`);
 });
